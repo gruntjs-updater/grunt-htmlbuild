@@ -1,6 +1,6 @@
 {
   "name": "grunt-htmlbuild",
-  "description": "More flexible variation of usemin.",
+  "description": "A more flexible replacement for grunt-usemin.",
   "version": "0.1.0",
   "homepage": "https://github.com/amekkawi/grunt-htmlbuild",
   "author": {
