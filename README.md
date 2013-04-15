@@ -67,4 +67,5 @@ TODO
 
 ## Release History
 
+* 2013-04-15   v0.1.1   Added missing require() to htmlbuild.js
 * 2013-04-15   v0.1.0   Work in progress release.
