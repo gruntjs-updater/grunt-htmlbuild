@@ -11,7 +11,8 @@
 module.exports = function(grunt) {
 	var _ = grunt.util._,
 		util = require('util'),
-		path = require('path');
+		path = require('path'),
+		BlockParser = require('../lib/blockparser');
 
 	grunt.registerMultiTask('htmlbuild', 'A more flexible replacement for grunt-usemin.', function() {
 		var options = this.options({
