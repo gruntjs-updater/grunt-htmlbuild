@@ -87,7 +87,7 @@ module.exports = function(grunt) {
 
 					grunt.event.on(this.name + '.concat', function(ev) {
 						grunt.log.writeln("Added concat:" + ev.target + " " + grunt.log.wordlist([ ev.src, ev.dest ], { separator: ' -> ' }));
-						configChanged['concat'] = concat;
+						configChanged[options.concat || 'concat'] = concat;
 
 						if (!concatDests[ev.target])
 							concatDests[ev.target] = {};
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
 
 					grunt.event.on(this.name + '.uglify', function(ev) {
 						grunt.log.writeln("Added uglify:" + ev.target + " " + grunt.log.wordlist([ ev.src, ev.dest ], { separator: ' -> ' }));
-						configChanged['uglify'] = uglify;
+						configChanged[options.uglify || 'uglify'] = uglify;
 
 						if (!uglifyDests[ev.target])
 							uglifyDests[ev.target] = {};
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
 
 					grunt.event.on(this.name + '.less', function(ev) {
 						grunt.log.writeln("Added less:" + ev.target + " " + grunt.log.wordlist([ ev.src, ev.dest ], { separator: ' -> ' }));
-						configChanged['less'] = less;
+						configChanged[options.less || 'less'] = less;
 
 						if (!lessDests[ev.target])
 							lessDests[ev.target] = {};
@@ -126,7 +126,7 @@ module.exports = function(grunt) {
 
 					grunt.event.on(this.name + '.requirejs', function(ev) {
 						grunt.log.writeln("Added requirejs:" + ev.target + " " + grunt.log.wordlist([ ev.src, ev.dest ], { separator: ' -> ' }));
-						configChanged['requirejs'] = requirejs;
+						configChanged[options.requirejs || 'requirejs'] = requirejs;
 
 						if (requirejs.hasOwnProperty(ev.target))
 							grunt.fail.warn("A requirejs config already exists for the target: " + ev.target + '.');
