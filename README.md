@@ -67,5 +67,6 @@ TODO
 
 ## Release History
 
-* 2013-04-15   v0.1.1   Added missing require() to htmlbuild.js
-* 2013-04-15   v0.1.0   Work in progress release.
+* 2013-04-16   v0.1.2   Fixed htmlbuild so it properly uses options.concat, options.uglify, etc.
+* 2013-04-15   v0.1.1   Added missing require() to htmlbuild.js
+* 2013-04-15   v0.1.0   Work in progress release.
